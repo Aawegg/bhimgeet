@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0D47A1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="BhimGeet - 172 Bhimrao Ambedkar songs with lyrics and YouTube videos">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https://img.youtube.com; frame-src https://www.youtube.com; connect-src 'self' https://wa.me https://fonts.googleapis.com https://fonts.gstatic.com; frame-ancestors 'none'">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <title>BhimGeet - भीमगीत</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☸️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <!-- Splash -->
+  <div id="splash">
+    <div class="splash-content">
+      <div class="splash-icon">☸️</div>
+      <div class="splash-title">भीमगीत</div>
+      <div class="splash-sub">BhimGeet</div>
+      <div class="splash-loader"><div class="splash-bar"></div></div>
+    </div>
+  </div>
+
+  <div id="app">
+
+    <!-- Header -->
+    <header id="main-header">
+      <div class="header-content">
+        <div class="header-left">
+          <button id="back-btn" class="icon-btn hidden" aria-label="Go back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <h1 id="header-title"><span class="header-icon">☸️</span> भीमगीत</h1>
+        </div>
+        <div class="header-right">
+          <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle dark mode">
+            <svg id="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg id="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button id="search-toggle-btn" class="icon-btn" aria-label="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="search-bar" class="hidden">
+        <div class="search-input-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="search-input" placeholder="गीत खोजें / Search songs..." autocomplete="off">
+          <button id="search-clear" class="icon-btn small hidden" aria-label="Clear">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Pages -->
+    <main id="pages">
+
+      <!-- HOME -->
+      <section id="page-home" class="page active">
+        <div class="hero">
+          <div class="hero-bg"></div>
+          <div class="hero-content">
+            <div class="hero-icon">☸️</div>
+            <h2>भीमगीत</h2>
+            <p>BhimGeet Collection</p>
+            <p class="hero-subtitle">बाबासाहेब डॉ. भीमराव अंबेडकर यांची गीते</p>
+            <div class="hero-stats">
+              <span id="total-songs">172 गीत / Songs</span>
+              <span class="dot">•</span>
+              <span>YouTube Videos</span>
+            </div>
+            <div class="hero-buttons">
+              <button class="hero-btn primary-btn" id="shuffle-home-btn">🔀 Shuffle</button>
+              <button class="hero-btn secondary-btn" id="see-all-btn">सर्व गीत / All Songs →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Song of the Day -->
+        <div class="section">
+          <h3 class="section-title">आजचे गीत <span class="en">Song of the Day</span></h3>
+          <div id="sotd-container"></div>
+        </div>
+
+        <!-- Recently Played -->
+        <div class="section" id="recent-section" style="display:none">
+          <h3 class="section-title">अलीकडील <span class="en">Recently Played</span></h3>
+          <div id="recent-songs" class="songs-list"></div>
+        </div>
+
+        <!-- Popular Songs -->
+        <div class="section">
+          <h3 class="section-title">लोकप्रिय गीत <span class="en">Popular Songs</span></h3>
+          <div id="featured-songs" class="songs-list"></div>
+        </div>
+
+        <!-- Bottom Cards -->
+        <div class="section" style="display:flex;gap:10px;padding-bottom:24px">
+          <button class="home-action-card" id="share-app-btn">
+            <span class="hac-icon">📲</span>
+            <span class="hac-text">Share App</span>
+          </button>
+          <button class="home-action-card" id="feedback-btn">
+            <span class="hac-icon">💬</span>
+            <span class="hac-text">Feedback</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- BROWSE -->
+      <section id="page-browse" class="page">
+        <div class="category-chips-wrap">
+          <div id="category-chips" class="category-chips"></div>
+        </div>
+        <div class="page-header-space">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div>
+              <h2 class="page-title">सर्व गीत <span class="en">All Songs</span></h2>
+              <p class="browse-count" id="browse-count"></p>
+            </div>
+            <button class="song-nav-btn shuffle-btn" id="shuffle-browse-btn">🔀</button>
+          </div>
+        </div>
+        <div id="browse-songs" class="songs-list padded"></div>
+        <div id="browse-empty" class="empty-state hidden">
+          <div class="empty-icon">🔍</div>
+          <p>गीत सापडले नाही</p>
+          <p class="en">No songs found</p>
+        </div>
+      </section>
+
+      <!-- PLAYLISTS -->
+      <section id="page-playlists" class="page">
+        <div class="page-header-space">
+          <h2 class="page-title">प्लेलिस्ट <span class="en">Playlists</span></h2>
+        </div>
+        <div style="padding: 12px 16px;">
+          <button class="create-playlist-btn" id="create-playlist-btn">+ नवीन प्लेलिस्ट / New Playlist</button>
+          <div id="playlists-list" class="songs-list"></div>
+          <div id="playlists-empty" class="empty-state hidden">
+            <div class="empty-icon">🎶</div>
+            <p>अद्याप प्लेलिस्ट नाही</p>
+            <p class="en">No playlists yet</p>
+          </div>
+        </div>
+        <!-- Playlist Detail (shown when a playlist is selected) -->
+        <div id="playlist-detail" class="hidden" style="padding:0 16px 16px">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
+            <button class="song-nav-btn" id="playlist-back-btn">← Back</button>
+            <h3 id="playlist-detail-name" style="font-size:16px;font-weight:600;color:var(--text-primary)"></h3>
+            <span></span>
+          </div>
+          <div id="playlist-detail-songs" class="songs-list"></div>
+          <div id="playlist-detail-empty" class="empty-state hidden" style="padding:30px 20px">
+            <div class="empty-icon">🎵</div>
+            <p>या प्लेलिस्ट मध्ये गीत नाहीत</p>
+            <p class="en">No songs in this playlist</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAVORITES -->
+      <section id="page-favorites" class="page">
+        <div class="page-header-space">
+          <h2 class="page-title">पसंदीदा <span class="en">Favorites</span></h2>
+        </div>
+        <div id="favorites-songs" class="songs-list padded"></div>
+        <div id="favorites-empty" class="empty-state hidden">
+          <div class="empty-icon">❤️</div>
+          <p>अद्याप पसंदीदा नाही</p>
+          <p class="en">No favorites yet</p>
+          <p class="empty-hint">गीतावर ❤️ दाबा / Tap ❤️ on a song to add to favorites</p>
+        </div>
+      </section>
+
+      <!-- SONG DETAIL -->
+      <section id="page-song" class="page">
+        <div id="song-detail"></div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Nav (4 tabs) -->
+    <nav id="bottom-nav">
+      <button class="nav-item active" data-page="home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-page="browse">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.19 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>
+        <span>Songs</span>
+      </button>
+      <button class="nav-item" data-page="playlists">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"/></svg>
+        <span>Playlists</span>
+      </button>
+      <button class="nav-item" data-page="favorites">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <span>Favorites</span>
+      </button>
+    </nav>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="data.js?v=5"></script>
+  <script src="app.js?v=5"></script>
+</body>
+</html>
